@@ -6,16 +6,17 @@ from PIL import Image
 try:
     origem = argv[1]
     destino = argv[2]
+    print(f"{origem}, {destino}")
 except:
     origem, destino = None, None
 
 if origem == None:
-    origem = r'D:/pokedex/'
+    origem = r'C:/pokedex/'
 if destino == None:
-    destino = r'D:/pokedex/new/'
+    destino = r'C:/pokedex/new/'
 
 # Cria a pasta se não existir
-if not(os.path.isdir(destino)):
+if not os.path.isdir(destino):
     os.mkdir(destino)
 
 # Faz a leitura dos filhos da pasta, e cria uma lista caso o item seja arquivo "os.path.isfile"
@@ -28,4 +29,5 @@ for a in arquivos:
     img = Image.open(origem + a)
     out = destino + a.replace("jpg", "png")
     img.save(out)
+    print("All Done!")
 
