@@ -3,6 +3,7 @@
 import PyPDF2
 import sys
 
+# Faz a leitura de N parametros na chamada do script e salva eles em uma lista.
 inputs = sys.argv[1:]
 
 def pdf_combine(pdf_list):
