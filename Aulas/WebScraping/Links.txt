@@ -1,0 +1,5 @@
+https://swapi.dev/
+
+https://news.ycombinator.com/
+
+https://jsonplaceholder.typicode.com/
